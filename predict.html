@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Therapy Management</title>
   </head>
   
   <body style="background-color:powderblue;">
-  <h1 style="font-family:verdana;">Predict Patient Weight</h1>
+  <h1 style="font-family:verdana;">Care Pathway Optimization</h1>
+  <img src="concept_img.png" alt="Model fitness" width="640" height="480">
+  <h3 style="font-familr:verdana;">Enter the Lab recordings</h3>
   <div style="padding:20px;">
   <label for="Bp"><b>Enter Blood Pressure <small>(in mmHg)</small>:</b> </label>
   <input type="text" id="bpId" name="BloodPressure" value="120"><br>
@@ -47,8 +50,8 @@
   <label id="PredValue"></label>
   </div>
 
-  <h2>This Model is close to Accurate when the predicted weight is above 80Kg</h2>
-  <img src="fitness.jpg" alt="Model fitness" width="460" height="345">
+  <h2>The Q-Q Plot of the Model predicted Patient Weight(kg) compared to the Actual Weight(kg)</h2>
+  <img src="weight_q_q_plot.png" alt="Model fitness" width="460" height="345">
 
   <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
   <script src="jquery-3.2.1.min.js"></script>
