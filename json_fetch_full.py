@@ -27,7 +27,7 @@ CORS(app)
 @app.route('/')
 def output():
 	# serve index template
-	return render_template('index.html', name='pyml')
+	return render_template('predict.html', name='pyml')
 
 @app.route('/receiver', methods = ['POST'])
 def worker():
@@ -62,9 +62,9 @@ def worker():
    	    prod_ds[col] = prod_ds[col].astype(float)
 	y_pred = model.predict(prod_ds)
 	print(y_pred[0])
-	print(str(round(y_pred[0],2)), str(zip(prod_ds.columns, model.feature_importances_)))
-	return (str(round(y_pred[0],2)) + ' Feature Importances: ' + \
-			str('\n' * 2) + str(list(zip(prod_ds.columns, model.feature_importances_))))
+	print(str(round(y_pred[0],2)), str(zip(prod_ds.columns, model.coef_)))
+	return (str(round(y_pred[0],2)) + ' Feature Coefficients: ' + \
+			str('\n' * 2) + str(list(zip(prod_ds.columns, model.coef_))))
 
 
 
@@ -78,8 +78,9 @@ if __name__ == '__main__':
 	select_col = obs_transform.notnull().sum().sort_values(ascending=False)[0:11].index
 
 	select_obs = obs_transform[select_col]
-	model = XGBRegressor(booster='gbtree',objective='reg:squarederror',learning_rate = 0.1, \
-						 max_depth = 2, min_child_weight = 1, n_estimators = 50)
+	model = XGBRegressor(booster='gblinear',objective='reg:squarederror', \
+                           learning_rate = 0.1, max_depth = 2, min_child_weight = 1,\
+                           n_estimators = 200, subsample = 0.1)
 	X = select_obs.drop(['Body Weight','Body Mass Index'], axis=1)
 	y = select_obs['Body Weight']
 	y.replace(np.NaN,y.mean(),inplace=True)
