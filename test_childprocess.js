@@ -1,15 +1,20 @@
 //testing childprocess
 // import child_process;
+//import * as firebase from "firebase/app";
+//var firebase = require("firebase/app");
 
-var config = {
-	apiKey: "AIzaSyBdCtKAQlpydwshdovRMabhfCKDlEgoFQ4",
-	authDomain: "vas-ml-fhir.firebaseapp.com",
-	databaseURL: "https://vas-ml-fhir.firebaseio.com",
-	projectId: "vas-ml-fhir",
-	storageBucket: "vas-ml-fhir.appspot.com",
-	messagingSenderId: "157728948296"
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBdCtKAQlpydwshdovRMabhfCKDlEgoFQ4",
+  authDomain: "vas-ml-fhir.firebaseapp.com",
+  databaseURL: "https://vas-ml-fhir.firebaseio.com",
+  projectId: "vas-ml-fhir",
+  storageBucket: "vas-ml-fhir.appspot.com",
+  messagingSenderId: "157728948296",
+  appId: "1:157728948296:web:165720b3830c063d26987d"
 };
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 const messageAppReference = firebase.database();
 
