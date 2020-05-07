@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Therapy Management</title>
+    <title>Therapy Optimization</title>
   </head>
   
   <body style="background-color:powderblue;">
-  <h1 style="font-family:verdana;">Care Pathway Optimization</h1>
+  <h1 style="font-family:verdana;">Therapy Optimization</h1>
   <img src="concept_img.png" alt="Model fitness" width="640" height="480">
   <h3 style="font-familr:verdana;">Enter the Lab recordings</h3>
   <div style="padding:20px;">
@@ -62,7 +62,13 @@
       <a href="https://bmcnephrol.biomedcentral.com/articles/10.1186/s12882-017-0474-0">Creatinine and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
+  <div style="padding:20px;">
+    <label for="actual_weight"><b>Enter Actual Weight <small>(in Kg)</small></b></label>
+    <input type="text" id="act_weight" name="Actual_weight" value="NaN"><br>
+  </div>
+  <div style="padding:20px;">
   <input type="submit" id="predB" name="PredictWeight" value="Predict Weight">
+  </div>
   <div style="padding:20px;">
   <label for="PredWeight"><b>The Predicted Weight <small>(in Kg):</small></b> </label>
   <label id="PredValue"></label>
