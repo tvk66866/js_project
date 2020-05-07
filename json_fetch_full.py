@@ -62,7 +62,9 @@ def worker():
    	    prod_ds[col] = prod_ds[col].astype(float)
 	y_pred = model.predict(prod_ds)
 	print(y_pred[0])
-	return str(round(y_pred[0],2))
+	print(str(round(y_pred[0],2)), str(zip(prod_ds.columns, model.feature_importances_)))
+	return (str(round(y_pred[0],2)) + ' Feature Importances: ' + \
+			str('\n' * 2) + str(list(zip(prod_ds.columns, model.feature_importances_))))
 
 
 
@@ -76,8 +78,8 @@ if __name__ == '__main__':
 	select_col = obs_transform.notnull().sum().sort_values(ascending=False)[0:11].index
 
 	select_obs = obs_transform[select_col]
-	model = XGBRegressor(booster='gbtree',objective='reg:squarederror',larning_rate = 0.0001, \
-						 max_depth = 2, min_child_weight = 1, n_estimators = 50, subsample = 0.4)
+	model = XGBRegressor(booster='gbtree',objective='reg:squarederror',learning_rate = 0.1, \
+						 max_depth = 2, min_child_weight = 1, n_estimators = 50)
 	X = select_obs.drop(['Body Weight','Body Mass Index'], axis=1)
 	y = select_obs['Body Weight']
 	y.replace(np.NaN,y.mean(),inplace=True)
