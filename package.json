@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tvk66866/js_project#readme",
   "dependencies": {
-    "firebase": "^7.14.2"
+    "firebase": "^7.14.2",
+    "import": "0.0.6"
   }
 }

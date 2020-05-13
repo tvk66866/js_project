@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <head>
     <title>Therapy Optimization</title>
   </head>
   
   <body style="background-color:powderblue;">
-  <h1 style="font-family:verdana;">Therapy Optimization</h1>
-  <img src="concept2_img.png" alt="Model fitness" width="640" height="480">
+  <h1 style="font-family:verdana;">Prescriptive Therapy Optimization</h1>
+  <img src="concept2_img.png" alt="Model fitness" style="max-width:100%;height:auto;">
   <h3 style="font-familr:verdana;">Enter the Lab recordings</h3>
+  <div style="padding:5px;">
+  <input type="submit" id="loadLab" name="loadLabData" value="Load Lab Data">
+  </div>
   <div style="padding:20px;">
   <label for="Bp"><b>Enter Blood Pressure <small>(in mmHg)</small>:</b> </label>
   <input type="text" id="bpId" name="BloodPressure" value="120"><br>
@@ -77,6 +87,27 @@
   <h2>Model Accuracy: <em>The Q-Q Plot of the Model with predicted Patient Weight(kg) compared to the Actual Weight(kg)</em></h2>
   <img src="weight_q_q_plot.png" alt="Model fitness" width="460" height="345">
 
+
+<!--  &lt;!&ndash; The core Firebase JS SDK is always required and must be listed first &ndash;&gt;-->
+<!--<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>-->
+
+<!--&lt;!&ndash; TODO: Add SDKs for Firebase products that you want to use-->
+<!--     https://firebase.google.com/docs/web/setup#available-libraries &ndash;&gt;-->
+
+<!--<script>-->
+<!--  // Your web app's Firebase configuration-->
+<!--  var firebaseConfig = {-->
+<!--    apiKey: "AIzaSyBdCtKAQlpydwshdovRMabhfCKDlEgoFQ4",-->
+<!--    authDomain: "vas-ml-fhir.firebaseapp.com",-->
+<!--    databaseURL: "https://vas-ml-fhir.firebaseio.com",-->
+<!--    projectId: "vas-ml-fhir",-->
+<!--    storageBucket: "vas-ml-fhir.appspot.com",-->
+<!--    messagingSenderId: "157728948296",-->
+<!--    appId: "1:157728948296:web:165720b3830c063d26987d"-->
+<!--  };-->
+<!--  // Initialize Firebase-->
+<!--  firebase.initializeApp(firebaseConfig);-->
+<!--</script>-->
   <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
 <!--  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>-->
   <script src="jquery-3.2.1.min.js"></script>

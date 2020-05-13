@@ -3,26 +3,23 @@
 //import * as firebase from "firebase/app";
 //var firebase = require("firebase/app");
 
-
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBdCtKAQlpydwshdovRMabhfCKDlEgoFQ4",
-  authDomain: "vas-ml-fhir.firebaseapp.com",
-  databaseURL: "https://vas-ml-fhir.firebaseio.com",
-  projectId: "vas-ml-fhir",
-  storageBucket: "vas-ml-fhir.appspot.com",
-  messagingSenderId: "157728948296",
-  appId: "1:157728948296:web:165720b3830c063d26987d"
-};
-firebase.initializeApp(firebaseConfig);
-
-const messageAppReference = firebase.database();
+////import firebase from "firebase"
+////<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+//const firebaseConfig = {
+//  apiKey: "AIzaSyBdCtKAQlpydwshdovRMabhfCKDlEgoFQ4",
+//  authDomain: "vas-ml-fhir.firebaseapp.com",
+//  databaseURL: "https://vas-ml-fhir.firebaseio.com",
+//  projectId: "vas-ml-fhir",
+//  storageBucket: "vas-ml-fhir.appspot.com",
+//  messagingSenderId: "157728948296",
+//  appId: "1:157728948296:web:165720b3830c063d26987d"
+//};
+//firebase-app.initializeApp(firebaseConfig);
+//
+//const messageAppReference = firebase-app.database();
 
 $(function() { 
 console.log('testing');
-
-
-
 let $bp = $("#bpId")
 let bp = document.querySelector("#bpId")
 let $bh = $("#bhId")
@@ -74,8 +71,9 @@ $("#predB").click(function(event){
 
   let predictStringified = JSON.stringify(predictInput)
   console.log(predictStringified)
-  const messagesReference = messageAppReference.ref('vitals');
-  messagesReference.push(predictInput)
+//  const messagesReference = messageAppReference.ref('vitals');
+//  messagesReference.push(predictInput)
+// 24.6.80.35  /127.0.0.1
   $.post("http://127.0.0.1:5000/receiver", JSON.stringify(predictInput)).done(function(response){
 		console.log(response)
 		$predId.text(response)
