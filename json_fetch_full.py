@@ -74,7 +74,7 @@ def worker():
     logging.info(f'{(y_pred[0])}')
     print(str(round(y_pred[0], 2)), str(list(zip(prod_ds.columns, model.coef_))))
     return (str(round(y_pred[0], 2)) + ' Feature Coefficients: ' + \
-            str('\n' * 2) + str(list(zip(prod_ds.columns, model.coef_))))
+            str(list(zip(prod_ds.columns, model.coef_))))
 
 
 if __name__ == '__main__':

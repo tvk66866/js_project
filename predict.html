@@ -7,79 +7,83 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<div style="background-image: url('beach.png');">-->
   <head>
-    <title>Therapy Optimization</title>
+    <title>AI/ML Therapy Optimization</title>
   </head>
   
-  <body style="background-color:powderblue;">
-  <h1 style="font-family:verdana;">Prescriptive Therapy Optimization</h1>
+  <body style="background-color:#E2E1EB;">
+  <h1 style="font-family:verdana;font-size:300%;text-align:center;"><b>Prescriptive Therapy Optimization</b></h1>
   <img src="concept2_img.png" alt="Model fitness" style="max-width:100%;height:auto;">
-  <h3 style="font-familr:verdana;">Enter the Lab recordings</h3>
+  <h3 style="font-familr:verdana;font-size:200%;">Enter the Lab recordings</h3>
   <div style="padding:5px;">
-  <input type="submit" id="loadLab" name="loadLabData" value="Load Lab Data">
+    <button type="button" id="loadLab" name="loadLabData" value="Load Lab Data" onclick="document.getElementById('status').innerHTML = Date()">Load Lab Data</button>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:5px;">
+  <p id="status"></p>
+  </div>
+  <div style="padding:20px;font-size:150%;">
   <label for="Bp"><b>Enter Blood Pressure <small>(in mmHg)</small>:</b> </label>
   <input type="text" id="bpId" name="BloodPressure" value="120"><br>
   <a href="https://cutt.ly/syzpQ5y">Blood pressure and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <label for="Ot"><b>Enter Oral Temperature <small>(in celcius):</small></b> </label>
   <input type="text" Id="otId" name="Oraltemp" value="NaN"><br>
   <a href="https://cutt.ly/pyzoAeP">Body temperature and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <label for="Bh"><b>Enter Height <small>(in cm):</small></b> </label>
   <input type="text" id="bhId" name="BodyHeight" value="NaN"><br>
     <a href="https://cutt.ly/2yzaacD">Body height and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <label for="Tr"><b>Enter Triglycerides <small>(in mg/dL):</small></b> </label>
   <input type="text" id="triId" name="Trigly" value="NaN"><br>
     <a href="https://cutt.ly/Fyzaxtz">Triglycerides and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <label for="Hdl"><b>Enter HDL <small>(in mg/dL):</small></b> </label>
   <input type="text" id="hdlId" name="hdlc" value="NaN"><br>
       <a href="https://cutt.ly/fyzaWEH">HDL and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <label for="Ldl"><b>Enter LDL <small>(in mg/dL):</small></b> </label>
   <input type="text" id="ldlId" name="ldlc" value="NaN"><br>
       <a href="https://www.nature.com/articles/0800427.pdf?origin=ppub">LDL and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <label for="Tcl"><b>Enter Total Cholostrol <small>(in mg/dL):</small></b> </label>
   <input type="text" id="tclId" name="tclvalue" value="NaN"><br>
       <a href="https://www.ncbi.nlm.nih.gov/pubmed/9192227">Total Cholostrol and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <label for="A1c"><b>Enter Hemoglobin A1c/Hemoglobin <small>(in %):</small></b> </label>
   <input type="text" id="a1cId" name="A1cvalue" value="NaN"><br>
       <a href="https://www.ncbi.nlm.nih.gov/pubmed/23697591">Hemoglobin and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <label for="Creatinine"><b>Enter Creatinine <small>(in mg/dL):</small></b> </label>
   <input type="text" id="creId" name="Creatininevalue" value="NaN"><br>
       <a href="https://bmcnephrol.biomedcentral.com/articles/10.1186/s12882-017-0474-0">Creatinine and weight</a>
   <p>Normal range: () use NaN when not available</p>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
     <label for="actual_weight"><b>Enter Actual Weight <small>(in Kg)</small></b></label>
     <input type="text" id="act_weight" name="Actual_weight" value="NaN"><br>
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <input type="submit" id="predB" name="PredictWeight" value="Predict Weight">
   </div>
-  <div style="padding:20px;">
+  <div style="padding:20px;font-size:150%;">
   <label for="PredWeight"><b>The Predicted Weight <small>(in Kg):</small></b> </label>
   <label id="PredValue"></label>
   </div>
