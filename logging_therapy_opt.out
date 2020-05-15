@@ -1066,3 +1066,119 @@ INFO:root:Bsst model XGBRegressor(base_score=0.5, booster='gblinear', colsample_
 INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 INFO:root:112.19613647460938
 INFO:werkzeug:127.0.0.1 - - [12/May/2020 23:45:56] "[37mPOST /receiver HTTP/1.1[0m" 200 -
+INFO:root:************ 13/05/2020 17:06:07 Data loading and transformation
+INFO:root:The count of rows = patient_name    3417
+obs_code        3417
+obs_name        3417
+obs_date        3417
+obs_value       3417
+obs_unit        3407
+dtype: int64
+INFO:root:The column names are Index(['patient_name', 'obs_code', 'obs_name', 'obs_date', 'obs_value',
+       'obs_unit'],
+      dtype='object')
+INFO:root:The transformed column names Index(['Abuse Status [OMAHA]', 'American house dust mite IgE Ab in Serum',
+       'Are you covered by health insurance or some other kind of health care plan [PhenX]',
+       'Blood Pressure', 'Body Height', 'Body Mass Index', 'Body Weight',
+       'Calcium', 'Carbon Dioxide', 'Cat dander IgE Ab in Serum',
+       'Cause of Death [US Standard Certificate of Death]', 'Chloride',
+       'Cladosporium herbarum IgE Ab in Serum', 'Codfish IgE Ab in Serum',
+       'Common Ragweed IgE Ab in Serum', 'Cow milk IgE Ab in Serum',
+       'Creatinine', 'Egg white IgE Ab in Serum',
+       'Estimated Glomerular Filtration Rate', 'FEV1_​FVC', 'Glucose',
+       'HIV status', 'Hemoglobin A1c_Hemoglobin_total in Blood',
+       'Hemoglobin_gastrointestinal [Presence] in Stool by Immunologic method',
+       'High Density Lipoprotein Cholesterol',
+       'History of Hospitalizations+​Outpatient visits',
+       'Honey bee IgE Ab in Serum', 'Housing status', 'Latex IgE Ab in Serum',
+       'Low Density Lipoprotein Cholesterol', 'Microalbumin Creatine Ratio',
+       'Oral temperature', 'Peanut IgE Ab in Serum',
+       'Percentage area affected by eczema Head and Neck',
+       'Percentage area affected by eczema Lower extremitiy - bilateral',
+       'Percentage area affected by eczema Trunk',
+       'Percentage area affected by eczema Upper extremitiy - bilateral',
+       'Polyp size greatest dimension by CAP cancer protocols', 'Potassium',
+       'Sexual orientation', 'Shrimp IgE Ab in Serum', 'Sodium',
+       'Soybean IgE Ab in Serum', 'Total Cholesterol', 'Total score [MMSE]',
+       'Triglycerides', 'Urea Nitrogen', 'Walnut IgE Ab in Serum',
+       'Wheat IgE Ab in Serum', 'White oak IgE Ab in Serum'],
+      dtype='object', name='obs_name')
+INFO:root:Count of rows for modeling obs_name
+Blood Pressure                              83
+Body Height                                 83
+Body Weight                                 83
+Body Mass Index                             80
+High Density Lipoprotein Cholesterol        49
+Low Density Lipoprotein Cholesterol         49
+Triglycerides                               49
+Total Cholesterol                           49
+Oral temperature                            33
+Hemoglobin A1c_Hemoglobin_total in Blood    17
+Creatinine                                  17
+dtype: int64
+INFO:root:Bsst model XGBRegressor(base_score=0.5, booster='gblinear', colsample_bylevel=1,
+             colsample_bynode=1, colsample_bytree=1, gamma=0,
+             importance_type='gain', learning_rate=0.1, max_delta_step=0,
+             max_depth=2, min_child_weight=1, missing=None, n_estimators=200,
+             n_jobs=1, nthread=None, objective='reg:squarederror',
+             random_state=0, reg_alpha=0, reg_lambda=1, scale_pos_weight=1,
+             seed=None, silent=None, subsample=0.1, verbosity=1)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:root:************ 14/05/2020 00:15:14 Data loading and transformation
+INFO:root:The count of rows = patient_name    3417
+obs_code        3417
+obs_name        3417
+obs_date        3417
+obs_value       3417
+obs_unit        3407
+dtype: int64
+INFO:root:The column names are Index(['patient_name', 'obs_code', 'obs_name', 'obs_date', 'obs_value',
+       'obs_unit'],
+      dtype='object')
+INFO:root:The transformed column names Index(['Abuse Status [OMAHA]', 'American house dust mite IgE Ab in Serum',
+       'Are you covered by health insurance or some other kind of health care plan [PhenX]',
+       'Blood Pressure', 'Body Height', 'Body Mass Index', 'Body Weight',
+       'Calcium', 'Carbon Dioxide', 'Cat dander IgE Ab in Serum',
+       'Cause of Death [US Standard Certificate of Death]', 'Chloride',
+       'Cladosporium herbarum IgE Ab in Serum', 'Codfish IgE Ab in Serum',
+       'Common Ragweed IgE Ab in Serum', 'Cow milk IgE Ab in Serum',
+       'Creatinine', 'Egg white IgE Ab in Serum',
+       'Estimated Glomerular Filtration Rate', 'FEV1_​FVC', 'Glucose',
+       'HIV status', 'Hemoglobin A1c_Hemoglobin_total in Blood',
+       'Hemoglobin_gastrointestinal [Presence] in Stool by Immunologic method',
+       'High Density Lipoprotein Cholesterol',
+       'History of Hospitalizations+​Outpatient visits',
+       'Honey bee IgE Ab in Serum', 'Housing status', 'Latex IgE Ab in Serum',
+       'Low Density Lipoprotein Cholesterol', 'Microalbumin Creatine Ratio',
+       'Oral temperature', 'Peanut IgE Ab in Serum',
+       'Percentage area affected by eczema Head and Neck',
+       'Percentage area affected by eczema Lower extremitiy - bilateral',
+       'Percentage area affected by eczema Trunk',
+       'Percentage area affected by eczema Upper extremitiy - bilateral',
+       'Polyp size greatest dimension by CAP cancer protocols', 'Potassium',
+       'Sexual orientation', 'Shrimp IgE Ab in Serum', 'Sodium',
+       'Soybean IgE Ab in Serum', 'Total Cholesterol', 'Total score [MMSE]',
+       'Triglycerides', 'Urea Nitrogen', 'Walnut IgE Ab in Serum',
+       'Wheat IgE Ab in Serum', 'White oak IgE Ab in Serum'],
+      dtype='object', name='obs_name')
+INFO:root:Count of rows for modeling obs_name
+Blood Pressure                              83
+Body Height                                 83
+Body Weight                                 83
+Body Mass Index                             80
+High Density Lipoprotein Cholesterol        49
+Low Density Lipoprotein Cholesterol         49
+Triglycerides                               49
+Total Cholesterol                           49
+Oral temperature                            33
+Hemoglobin A1c_Hemoglobin_total in Blood    17
+Creatinine                                  17
+dtype: int64
+INFO:root:Bsst model XGBRegressor(base_score=0.5, booster='gblinear', colsample_bylevel=1,
+             colsample_bynode=1, colsample_bytree=1, gamma=0,
+             importance_type='gain', learning_rate=0.1, max_delta_step=0,
+             max_depth=2, min_child_weight=1, missing=None, n_estimators=200,
+             n_jobs=1, nthread=None, objective='reg:squarederror',
+             random_state=0, reg_alpha=0, reg_lambda=1, scale_pos_weight=1,
+             seed=None, silent=None, subsample=0.1, verbosity=1)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
