@@ -98,6 +98,7 @@ if __name__ == '__main__':
     X = select_obs.drop(['Body Weight', 'Body Mass Index'], axis=1)
     y = select_obs['Body Weight']
     y.replace(np.NaN, y.mean(), inplace=True)
+    print(y.head())
     model.fit(X, y)
     logging.info(f'Bsst model {model}')
     # end
