@@ -140,7 +140,7 @@ python-jwt==3.2.6
 python-slugify==4.0.0
 pytimeparse==1.1.8
 pytz==2019.3
-PyYAML==5.3.1
+PyYAML==5.4
 pyzmq==18.1.1
 QtPy==1.9.0
 querystring-parser==1.2.4
