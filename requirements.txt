@@ -125,7 +125,7 @@ pycosat==0.6.3
 pycparser==2.20
 pycrypto==2.6.1
 pyFirmata==1.1.0
-Pygments==2.6.1
+Pygments==2.7.4
 PyMeeus==0.3.7
 pyOpenSSL==19.1.0
 pyparsing==2.4.7
