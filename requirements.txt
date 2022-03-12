@@ -107,7 +107,7 @@ parsedatetime==2.5
 parso==0.7.0
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==7.1.2
+Pillow==9.0.1
 pkginfo==1.5.0.1
 plotly==4.6.0
 prettytable==0.7.2
