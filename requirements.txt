@@ -136,7 +136,7 @@ pystan==2.19.1.1
 python-dateutil==2.8.1
 python-editor==1.0.4
 python-firebase==1.2
-python-jwt==3.2.6
+python-jwt==3.3.4
 python-slugify==4.0.0
 pytimeparse==1.1.8
 pytz==2019.3
